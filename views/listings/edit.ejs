@@ -1,0 +1,99 @@
+<% layout("/layouts/boilerplate") %>
+<div class="row mt-4">
+  <div class="col-8 offset-2">
+    <h3>Edit Location</h3>
+    <form
+      action="/listings/<%= listing._id %>?_method=PUT"
+      method="POST"
+      novalidate
+      enctype="multipart/form-data"
+      class="needs-validation"
+    >
+      <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+        <input
+          name="title"
+          placeholder="Add a catchy Title"
+          class="form-control"
+          type="text"
+          value="<%= listing.title %>"
+          required
+        />
+        <div class="valid-feedback">Title Looks Good!</div>
+      </div>
+
+      <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <textarea
+          name="description"
+          placeholder="enter description"
+          type="text"
+          class="form-control"
+          required
+        >
+<%= listing.description %></textarea
+        >
+        <div class="invalid-feedback">please enter a short descritption</div>
+      </div>
+      <div class="mb-3">
+        <b>Original location image</b>
+        <br />
+        <img
+          src="<%= originalImageUrl %>"
+          class="img-thumbnail shadow-sm"
+          style="max-width: 250px; height: 150px"
+          alt="Current Location image"
+        />
+      </div>
+
+      <div class="mb-3">
+        <label for="image" class="form-label">Upload new image</label>
+        <input name="image" type="file" class="form-control" />
+      </div>
+
+      <div class="row">
+        <div class="mb-3 col-md-4">
+          <label for="price" class="form-label">Price</label>
+          <input
+            name="price"
+            placeholder="1200"
+            type="number"
+            class="form-control"
+            value="<%= listing.price %>"
+            required
+          />
+          <div class="invalid-feedback">Price should be valid</div>
+        </div>
+
+        <div class="mb-3 col-md-8">
+          <label for="country" class="form-label">Country</label>
+          <input
+            name="country"
+            placeholder="India"
+            type="text"
+            class="form-control"
+            value="<%= listing.country %>"
+            required
+          />
+          <div class="invalid-feedback">Country name should be valid</div>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="location" class="form-label">Location</label>
+        <input
+          name="location"
+          placeholder="Hyderabad"
+          type="text"
+          class="form-control"
+          value="<%= listing.location %>"
+          required
+        />
+        <div class="invalid-feedback">Location should be valid</div>
+      </div>
+      <br />
+      <button type="submit" class="btn btn-dark edit-btn">Edit</button>
+      <br /><br /><br />
+    </form>
+  </div>
+</div>

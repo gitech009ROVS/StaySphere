@@ -1,0 +1,178 @@
+body {
+  font-family: "Plus Jakarta Sans", sans-serif !important;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  flex: 1;
+}
+
+/* Navbar */
+.navbar {
+  height: 4.5rem;
+  background-color: white;
+}
+
+.fa-mountain-sun {
+  color: #7c62cb;
+  font-size: 1.5rem;
+}
+
+.nav-link {
+  color: #222222 !important; /*to make our custom styling override the bootstrap styling we use the !important tag in the CSS*/
+}
+
+.nav-link:hover {
+  color: #7c62cb !important;
+}
+
+/* footer */
+.f-info {
+  display: flex;
+  height: 8rem;
+  background-color: #e7e6eb;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+  align-items: space-evenly;
+}
+
+.f-info-links a {
+  text-decoration: none;
+  color: #222222;
+}
+
+.f-info-links a:hover {
+  text-decoration: underline;
+}
+
+.f-info-links,
+.f-info-socials,
+.f-info-brand {
+  width: 100%;
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.f-info-socials i {
+  font-size: 1.2rem;
+  margin-right: 1rem;
+}
+
+.social-btn {
+  padding: 0;
+  border: none;
+  background: none;
+  outline: none;
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.social-btn i {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* Cards */
+.listing-card {
+  border: none !important;
+  margin-bottom: 2rem;
+}
+
+.card-img-top {
+  border-radius: 1rem !important;
+  width: 100% !important;
+  object-fit: cover !important;
+}
+
+.card-body {
+  padding: 0 !important;
+}
+
+.card-text {
+  font-weight: 400 !important;
+}
+
+.listing-link {
+  text-decoration: none;
+}
+
+/* Card Effect */
+.card-img-overlay {
+  opacity: 0;
+}
+
+.card-img-overlay:hover {
+  opacity: 0.2;
+  background-color: white;
+}
+
+/* New Page */
+
+.add-btn {
+  position: relative;
+  color: white !important;
+  background-color: #7c62cb !important;
+  border: none !important;
+  left: 330px !important;
+  width: 75px;
+}
+
+/* Edit Page */
+
+.edit-btn {
+  position: relative;
+  color: white !important;
+  background-color: #7c62cb !important;
+  border: none !important;
+  left: 330px !important;
+  width: 75px;
+}
+
+/* Show Page  */
+.show-img {
+  height: 30vh;
+}
+
+.btns {
+  display: flex;
+}
+
+.show-edit-btn {
+  background-color: #ac9bde !important;
+  border: none !important;
+}
+
+.show-edit-btn:hover {
+  background-color: #7c62cb !important;
+}
+
+.show-del-btn {
+  background-color: #f4919d !important;
+  border: none !important;
+}
+
+.show-del-btn:hover {
+  background-color: #e72b41 !important;
+  border: none !important;
+}
+
+.show-card {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.on-hover-purple:hover {
+  color: #7c62cb;
+  font-size: 19px;
+}
